@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            padding: 10px 30px;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        /* NAV ITEMS */
+        .nav-items {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-items li {
+            position: relative;
+        }
+
+        .nav-items li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .nav-items li a:hover {
+            color: rgb(93, 238, 9);
+        }
+
+        /* DROPDOWN */
+        .dropdown-menu {
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #78c261d5;
+            min-width: 150px;
+            display: none;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-menu li a {
+            display: block;
+            padding: 10px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .dropdown-menu li a:hover {
+            background-color: #c72828;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* BUTTON */
+        .nav-btn {
+            height: 35px;
+            width: 80px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .nav-btn:hover {
+            background-color: darkgreen;
+        }
+
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background-image: url("https://www.shutterstock.com/image-photo/seedling-hand-world-environment-concept-260nw-2464345769.jpg");
+            /* change image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+
+
+        }
+
+        @media(max-width:1000px) {
+            .navbar {
+                padding: 10px 15px;
+            }
+
+            .logo img {
+                width: 70px;
+            }
+
+            .nav-container {
+                flex-wrap: wrap;
+
+            }
+
+            .nav-items {
+                font-size: 12px;
+                gap: 1.5rem;
+                padding: 0.3rem 0.5rem;
+            }
+
+            .hero {
+                background-position: top center;
+                min-height: 80vh;
+
+
+            }
+
+
+        }
+
+        @media (max-width: 768px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-items {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .hero-content {
+                width: 600px;
+                margin-left: 100px;
+                margin-top: 80px;
+            }
+
+
+            /* HERO TEXT */
+            .hero-content {
+                width: 90%;
+                margin: 40px auto;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+        }
+
+        @media(698px) {
+            .hero {
+                background-position: top center;
+                min-height: 80vh;
+
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <nav class="navbar">
+            <div class="nav-container">
+
+
+                <div class="logo-wrap">
+                    <div class="logo">
+                        <img src="/ecofy.png" alt="Logo">
+                    </div>
+                    <h1>Echofy</h1>
+                </div>
+
+                <ul class="nav-items">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+
+                    <li class="dropdown">
+                        <a href="#">SERVICES</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Action</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">PAGES</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Action</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">BLOGS</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Action</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">CONTACT</a></li>
+
+                    <li>
+                        <button class="nav-btn">abcd</button>
+                    </li>
+                </ul>
+
+
+            </div>
+        </nav>
+
+
+
+        <div class="hero-content">
+            <h5 style="color:greenyellow;">Natural Environment</h5>
+            <h1 style="color: white;font-weight:bolder;font-size: 50px;">Be Safe Controls Environment</h1>
+            <p style="color:greenyellow;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ac Error fugiat esse
+                laborum aperiam totam magnam adipisci modi sit molestiae!</p>
+        </div>
+
+
+    </div>
+    <footer style="background-color:rgb(18, 163, 55); color: white;height: 100px;">
+        <div style="display: flex; font-size: 30px;justify-content:space-between; padding-top: 15px;">
+            <h6>Ocean-Recycling</h6>
+            <h6> Environmental</h6>
+            <h6>Reneable-Energy</h6>
+            <h6> Ocean-Recycling</h6>
+            <h6> Environmental</h6>
+            <h6>Reneable-Energy</h6>
+        </div>
+
+
+    </footer>
+
+</body>
+
+</html>
